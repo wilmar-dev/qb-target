@@ -51,19 +51,23 @@ Config.TargetModels = {
 
 }
 
-Config.PedOptions = {
+Config.GlobalPedOptions = {
 
 }
 
-Config.VehicleOptions = {
+Config.GlobalVehicleOptions = {
 
 }
 
-Config.ObjectOptions = {
+Config.GlobalObjectOptions = {
 
 }
 
-Config.PlayerOptions = {
+Config.GlobalPlayerOptions = {
+
+}
+
+Config.Peds = {
 
 }
 
@@ -73,7 +77,7 @@ Config.PlayerOptions = {
 
 if Config.EnableDefaultOptions then
 	Config.ToggleDoor = function(vehicle, door)
-		if GetVehicleDoorLockStatus(vehicle) ~= 2 then 
+		if GetVehicleDoorLockStatus(vehicle) ~= 2 then
 			if GetVehicleDoorAngleRatio(vehicle, door) > 0.0 then
 				SetVehicleDoorShut(vehicle, door, false)
 			else
